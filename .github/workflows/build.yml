@@ -14,8 +14,8 @@ jobs:
 # Set docker image names.
     - name: Setup env variables
       run: |
-        echo "DOCKER_SERVICE=kvalitetsit/sandbox-service" >> $GITHUB_ENV
-        echo "DOCKER_DOCUMENTATION=kvalitetsit/sandbox-service-documentation" >> $GITHUB_ENV
+        echo "DOCKER_SERVICE=jonaspkit/sandbox-service" >> $GITHUB_ENV
+        echo "DOCKER_DOCUMENTATION=jonaspkit/sandbox-service-documentation" >> $GITHUB_ENV
 
 # Checkout source code
     - uses: actions/checkout@v3
