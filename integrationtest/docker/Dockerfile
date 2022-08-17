@@ -1,4 +1,4 @@
-FROM kvalitetsit/sandbox-service:dev
+FROM jonaspkit/sandbox-service:dev
 
 COPY /maven/integrationtest.jar /app/lib/integrationtest.jar
 COPY /maven/org.jacoco.agent-*.jar /jacoco/jacoco-agent.jar

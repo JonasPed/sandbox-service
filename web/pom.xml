@@ -71,7 +71,7 @@
                 <configuration>
                     <images>
                         <image>
-                            <name>kvalitetsit/sandbox-service</name>
+                            <name>jonaspkit/sandbox-service</name>
                             <build>
                                 <tags>
                                     <tag>latest</tag>
