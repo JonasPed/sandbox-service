@@ -1,9 +1,5 @@
 name: Dependabot auto-merge
-on:
-  workflow_run:
-    workflows: ["Pull Request CI"]
-    types:
-      - completed
+on: pull_request
 
 permissions:
   pull-requests: write
@@ -12,12 +8,11 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' && 
-            github.event.workflow_run.conclusion == 'success' }} }}
+    if: ${{ github.actor == 'dependabot[bot]' && github.repository == 'KvalitetsIT/kithugs' }}
     steps:
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1.3.5
+        uses: dependabot/fetch-metadata@v1.3.6
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Approve PR
