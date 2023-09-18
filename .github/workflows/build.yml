@@ -18,7 +18,7 @@ jobs:
         echo "DOCKER_DOCUMENTATION=jonaspkit/sandbox-service-documentation" >> $GITHUB_ENV
 
 # Checkout source code
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
 # Fail if DOCKER_SERVICE is sandbox-service and repo is not sandbox-service. This step can be deleted once
     - name: Initial build
